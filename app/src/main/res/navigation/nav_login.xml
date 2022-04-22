@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_login"
+    app:startDestination="@id/loginHomeFragment">
+
+    <fragment
+        android:id="@+id/loginHomeFragment"
+        android:name="proyecto.dam.controlhub.ui.login.LoginHomeFragment"
+        android:label="fragment_login_home"
+        tools:layout="@layout/fragment_login_home" />
+    <fragment
+        android:id="@+id/registerLoginAdminFragment"
+        android:name="proyecto.dam.controlhub.ui.login.RegisterAdminLoginFragment"
+        android:label="fragment_register_login"
+        tools:layout="@layout/fragment_register_login_admin" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="proyecto.dam.controlhub.ui.login.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/registerCompanyFragment"
+        android:name="proyecto.dam.controlhub.ui.login.RegisterCompanyFragment"
+        android:label="fragment_register_company"
+        tools:layout="@layout/fragment_register_company" />
+    <fragment
+        android:id="@+id/registrationProcess"
+        android:name="proyecto.dam.controlhub.ui.login.RegistrationProcess"
+        android:label="fragment_registration_process"
+        tools:layout="@layout/fragment_registration_process" />
+</navigation>

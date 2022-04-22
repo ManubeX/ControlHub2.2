@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="proyecto.dam.controlhub.ui.home.HomeFragment"
+        android:label="@string/home_nav_menu"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_List"
+            app:destination="@id/nav_List" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_List"
+        android:name="proyecto.dam.controlhub.ui.lists.ListasFragment"
+        android:label="@string/list_nav_menu"
+        tools:layout="@layout/fragment_listas" />
+    <fragment
+        android:id="@+id/nav_message"
+        android:name="proyecto.dam.controlhub.ui.messages.MessagesFragment"
+        android:label="@string/messages_nav_menu"
+        tools:layout="@layout/fragment_messages" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="proyecto.dam.controlhub.ui.profile.ProfileFragment"
+        android:label="@string/profile_nav_menu"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_reports"
+        android:name="proyecto.dam.controlhub.ui.reports.ReportsFragment"
+        android:label="@string/reports_nav_menu"
+        tools:layout="@layout/fragment_reports" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="proyecto.dam.controlhub.ui.settings.SettingsFragment"
+        android:label="@string/settings_nav_menu"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

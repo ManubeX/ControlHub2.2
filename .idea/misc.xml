@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/drawable-v24/outline_cancel_24.xml" value="0.336" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/drawable/border_box_home.xml" value="0.3595" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/drawable/clock_drawable.xml" value="0.3595" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/drawable/edittext_border_red.xml" value="0.3635" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.336" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/drawable/ic_bussines.xml" value="0.1165" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/drawable/ic_ch_icon.xml" value="0.25" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/drawable/ic_ch_icon_2.xml" value="0.1275" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/drawable/ic_close.xml" value="0.336" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/drawable/ic_close_circle.xml" value="0.336" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/drawable/ic_lg__2_.xml" value="0.1" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/drawable/ic_message.xml" value="0.2455" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/drawable/ic_reports.xml" value="0.2455" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/drawable/ic_settings.xml" value="0.2455" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/drawable/side_nav_bar.xml" value="0.2455" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/drawable/splash_background.xml" value="0.1285" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/font/clock.xml" value="0.3927083333333333" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/app_bar_main.xml" value="0.2921195652173913" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/content_main.xml" value="0.17426545086119555" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_forgot_password_login.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_login.xml" value="0.33" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_login_home.xml" value="0.18" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_messages.xml" value="0.3625" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_register.xml" value="0.25" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_register_code_login.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_register_company.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_register_login.xml" value="0.25" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_register_login_admin.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_register_qr_login.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_registration_process.xml" value="0.22359982898674646" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_settings.xml" value="0.3484375" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_slideshow.xml" value="0.1" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/nav_header_main.xml" value="0.2921195652173913" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/menu/activity_main_drawer.xml" value="0.3625" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/menu/main.xml" value="0.3625" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1225" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

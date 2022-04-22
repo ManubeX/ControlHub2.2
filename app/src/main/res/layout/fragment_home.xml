@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    style="@style/fontColor">
+
+    <TextView
+        android:id="@+id/tL_Day"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/day"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tV_Day"
+        app:layout_constraintEnd_toEndOf="@+id/tV_Day"
+        app:layout_constraintStart_toStartOf="@+id/tV_Day" />
+
+
+    <TextView
+        android:id="@+id/tV_Day"
+        android:layout_width="112dp"
+        android:layout_height="73dp"
+        android:background="@color/clock"
+        android:fontFamily="@font/digi"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_clock"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/tV_Month"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tV_Month"
+        tools:text="30" />
+
+    <TextView
+        android:id="@+id/tL_Month"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/month"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tV_Month"
+        app:layout_constraintEnd_toEndOf="@+id/tV_Month"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tV_Month" />
+
+    <TextView
+        android:id="@+id/tV_Month"
+        android:layout_width="112dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="64dp"
+        android:background="@color/clock"
+        android:fontFamily="@font/digi"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_clock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="12" />
+
+
+    <TextView
+        android:id="@+id/tL_Year"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/year"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tV_Year"
+        app:layout_constraintEnd_toEndOf="@+id/tV_Year"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tV_Year" />
+
+    <TextView
+        android:id="@+id/tV_Year"
+        android:layout_width="112dp"
+        android:layout_height="73dp"
+        android:background="@color/clock"
+        android:fontFamily="@font/digi"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_clock"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tV_Month"
+        app:layout_constraintTop_toTopOf="@+id/tV_Month"
+        tools:text="2022" />
+
+    <TextView
+        android:id="@+id/tV_LastList"
+        android:layout_width="373dp"
+        android:layout_height="158dp"
+        android:layout_marginTop="48dp"
+        android:textColor="@color/black"
+        android:background="@drawable/border_box_home"
+        app:layout_constraintEnd_toEndOf="@+id/tV_Year"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tV_Day"
+        app:layout_constraintTop_toBottomOf="@+id/tV_Month"
+        tools:text="No last list \n no data list \n no data list" />
+
+    <TextView
+        android:id="@+id/tL_LastList"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:text="@string/last_list"
+        android:textAllCaps="true"
+        android:textSize="@dimen/text_home_label"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tV_LastList"
+        app:layout_constraintEnd_toEndOf="@+id/tV_LastList"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tV_LastList" />
+
+    <TextView
+        android:id="@+id/tL_LastCommunication"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:text="@string/last_communication"
+        android:textAllCaps="true"
+        android:textSize="@dimen/text_home_label"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tV_LastCommunication"
+        app:layout_constraintEnd_toEndOf="@+id/tV_LastCommunication"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tV_LastCommunication" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tV_LastCommunication"
+        android:layout_width="373dp"
+        android:layout_height="158dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/border_box_home"
+        app:layout_constraintEnd_toEndOf="@+id/tV_Year"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tV_Day"
+        app:layout_constraintTop_toBottomOf="@+id/tV_LastList" />
+
+    <TextView
+        android:id="@+id/tL_LastMessage"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:text="@string/last_messages"
+        android:textAllCaps="true"
+        android:textSize="@dimen/text_home_label"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tV_LastMessage"
+        app:layout_constraintEnd_toEndOf="@+id/tV_LastMessage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tV_LastMessage" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tV_LastMessage"
+        android:layout_width="373dp"
+        android:layout_height="158dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/border_box_home"
+        app:layout_constraintEnd_toEndOf="@+id/tV_Year"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tV_Day"
+        app:layout_constraintTop_toBottomOf="@+id/tV_LastCommunication" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

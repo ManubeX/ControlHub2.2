@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.login.RegisterFragment">
+
+    <Button
+        android:id="@+id/bR_Admin"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_administrator"
+        android:textColor="#F6F4F4"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:icon="@drawable/ic_baseline_person_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.239" />
+
+    <Button
+        android:id="@+id/bR_Qr"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/register_by_qr"
+        android:textSize="16sp"
+        app:icon="@drawable/ic_qr"
+        app:layout_constraintEnd_toEndOf="@+id/bR_Admin"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/bR_Admin"
+        app:layout_constraintTop_toBottomOf="@+id/bR_Admin" />
+
+    <Button
+        android:id="@+id/bR_Code"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/register_by_code"
+        android:textSize="16sp"
+        app:icon="@drawable/ic_keyboard"
+        app:layout_constraintEnd_toEndOf="@+id/bR_Qr"
+        app:layout_constraintStart_toStartOf="@+id/bR_Qr"
+        app:layout_constraintTop_toBottomOf="@+id/bR_Qr" />
+
+    <Button
+        android:id="@+id/bR_Back"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:textColor="#F8F8F8"
+        android:textSize="16sp"
+        app:icon="?attr/actionModeCloseDrawable"
+        app:iconPadding="16dp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bR_Code"
+        app:layout_constraintStart_toStartOf="@+id/bR_Code"
+        app:layout_constraintTop_toBottomOf="@+id/bR_Code"
+        app:layout_constraintVertical_bias="0.335" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

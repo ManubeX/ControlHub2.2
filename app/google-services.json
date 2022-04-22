@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "413965658044",
+    "project_id": "controlhub-proyecto-ilerna",
+    "storage_bucket": "controlhub-proyecto-ilerna.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413965658044:android:4fa6422e78646a3a12adb9",
+        "android_client_info": {
+          "package_name": "proyecto.dam.controlhub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413965658044-ckceh3f12ebp3skgv8gl9830iphi8jph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD50QLypLMM3PrToUYFwnPKmAhgAoCmDjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413965658044-ckceh3f12ebp3skgv8gl9830iphi8jph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
