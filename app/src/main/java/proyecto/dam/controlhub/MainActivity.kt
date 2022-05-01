@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout? = binding.drawerLayout
         appBarConfiguration = AppBarConfiguration (
             setOf(
-                R.id.nav_home, R.id.nav_List, R.id.nav_reports, R.id.nav_message, R.id.nav_profile,
+                R.id.nav_home, R.id.nav_List, R.id.nav_reports, R.id.nav_message,R.id.nav_product, R.id.nav_profile,
                 R.id.nav_settings
             ), drawerLayout)
 

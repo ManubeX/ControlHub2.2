@@ -12,6 +12,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="products">Products</string>
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -61,6 +62,8 @@
     <string name="company_email">Company email</string>
     <string name="business_sector">Business sector</string>
     <string name="registration_process">Registration process</string>
+    <string name="name_company_exist">There is already a company with that name</string>
+    <string name="load_image">Load image</string>
 
 
     <!-- Home Strings -->
@@ -70,4 +73,13 @@
     <string name="day">Day</string>
     <string name="month">Month</string>
     <string name="year">Year</string>
+
+    <!-- Product Strings -->
+    <string name="product_name">Product name</string>
+    <string name="product_family">Family</string>
+    <string name="product_price">Price</string>
+    <string name="product_add">Add product</string>
+    <string name="delete_product">Delete product</string>
+    <string name="product_empty">empty product data</string>
+
 </resources>

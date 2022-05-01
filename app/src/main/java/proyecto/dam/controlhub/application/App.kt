@@ -5,6 +5,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import proyecto.dam.controlhub.core.Prefs
+import proyecto.dam.controlhub.model.data.ProductData
 import proyecto.dam.controlhub.model.data.UserData
 
 class App : Application() {
@@ -20,6 +21,7 @@ pass: Ilerna12345
         var userAPP = UserData()
         lateinit var prefs: Prefs
         lateinit var auth: FirebaseAuth
+        var listProductsApp = mutableListOf<ProductData>()
     }
     override fun onCreate() {
         super.onCreate()

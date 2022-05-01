@@ -1,35 +1,33 @@
 package proyecto.dam.controlhub.ui.login
 
+
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
-import proyecto.dam.controlhub.R
-import proyecto.dam.controlhub.application.App
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.StorageReference
+import com.google.firebase.storage.ktx.storage
 import proyecto.dam.controlhub.application.App.Companion.auth
-import proyecto.dam.controlhub.databinding.FragmentLoginHomeBinding
+import proyecto.dam.controlhub.core.ImageUtil
 import proyecto.dam.controlhub.databinding.FragmentRegistrationProcessBinding
 import proyecto.dam.controlhub.model.data.CompanyData
 import proyecto.dam.controlhub.model.data.UserData
 import proyecto.dam.controlhub.model.provider.RegisterFirebase
+import java.io.File
 
 class RegistrationProcess : Fragment() {
-    private val viewModel : LoginViewModel by activityViewModels()
+    private val viewModel: LoginViewModel by activityViewModels()
     private var _binding: FragmentRegistrationProcessBinding? = null
     private val binding get() = _binding!!
-    private lateinit var user : UserData
+    private lateinit var user: UserData
     private lateinit var company: CompanyData
-    private lateinit var reg : RegisterFirebase
+    private lateinit var reg: RegisterFirebase
+    private val storage = Firebase.storage
 
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,43 +43,83 @@ class RegistrationProcess : Fragment() {
         company = viewModel.getCompanyData.value!!
         user = viewModel.getUserData.value!!
 
-              auth.createUserWithEmailAndPassword(
+        auth.createUserWithEmailAndPassword(
+            user.email,
+            user.password
+        )
+            .addOnCompleteListener {
+
+
+                auth.signInWithEmailAndPassword(
                     user.email,
-                    user.password)
-                    .addOnCompleteListener {
+                    user.password
+                ).addOnCompleteListener {
 
+                    user.id = auth.currentUser?.uid.toString()
 
-                        auth.signInWithEmailAndPassword(
-                            user.email,
-                            user.password).addOnCompleteListener{
+                    if (it.isSuccessful) {
 
-                            user.id = auth.currentUser?.uid.toString()
+                        user.company = company.companyName
 
-                            if(it.isSuccessful){
+                        reg = RegisterFirebase()
+                        reg.dbConfigurationComp(company)
+                        reg.registerUser(user)
 
-                                user.company = company.companyName
+                        //TODO Falta comprobar exixtencias redundantes
 
-                                reg = RegisterFirebase()
-                                reg.dbConfigurationComp(company)
-                                reg.registerUser(user)
+                        reg.getInitUser(auth.currentUser?.uid.toString())
 
-                                //TODO Falta comprobar exixtencias redundantes
+                        if(user.imageUrl != ""){
 
-                                viewModel.loginButtonPress()
+                           /* val imageUtil = ImageUtil(user)
+                            imageUtil.uploadImage()*/
 
+                           var referText =
+                                user.company.replace(" ","_") +
+                                        "/" +
+                                        "workers_profile"+
+                                        "/"+
+                                        user.id
 
+                            var storageRef = storage.reference
+                            var file = Uri.parse(user.imageUrl)
+                            var imageRef = storageRef.child(referText + "/" + file.lastPathSegment)
+
+                            var uploadTask = imageRef.putFile(file)
+
+                            val ref = storageRef.child(referText + "/" + file.lastPathSegment)
+                            val urlTask = uploadTask.continueWithTask { task ->
+                                if (!task.isSuccessful) {
+                                    task.exception?.let {
+                                        throw it
+                                    }
+                                }
+                                ref.downloadUrl
+                            }.addOnCompleteListener { task ->
+                                if (task.isSuccessful) {
+                                    user.imageUrl = task.result.toString()
+                                } else {
+
+                                }
                             }
-
-
                         }
+
+
+                        Thread.sleep(1000)
+
+                        viewModel.loginButtonPress()
 
 
                     }
 
 
-}
+                }
 
 
+            }
+
+
+    }
 
 
 }

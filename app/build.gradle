@@ -53,11 +53,11 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.2'
 
     //ViewModel
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0-alpha06"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.0-alpha06"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0-alpha06"
-    implementation "androidx.lifecycle:lifecycle-service:2.5.0-alpha06"
-    implementation "androidx.lifecycle:lifecycle-process:2.5.0-alpha06"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0-beta01"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.0-beta01"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0-beta01"
+    implementation "androidx.lifecycle:lifecycle-service:2.5.0-beta01"
+    implementation "androidx.lifecycle:lifecycle-process:2.5.0-beta01"
     testImplementation "androidx.arch.core:core-testing:2.1.0"
 
     //Firebase
@@ -65,5 +65,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.firebase:firebase-storage-ktx'
+
+    //RecyclerView
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    implementation "androidx.recyclerview:recyclerview-selection:1.1.0"
 
 }

@@ -22,10 +22,17 @@
             android:title="@string/messages_nav_menu" />
     </group>
 
+    <group android:id="@+id/other" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_product"
+            android:icon="@drawable/ic_pages"
+            android:title="@string/products" />
+    </group>
+
     <group android:id="@+id/secundary" android:checkableBehavior="single">
         <item
             android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_user"
+            android:icon="@drawable/ic_add_box"
             android:title="@string/profile_nav_menu" />
         <item
             android:id="@+id/nav_settings"

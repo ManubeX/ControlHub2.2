@@ -8,6 +8,7 @@
     tools:context=".ui.login.RegisterAdminLoginFragment">
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
@@ -47,14 +48,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="32dp"
                 android:hint="@string/name"
                 app:endIconMode="clear_text"
                 app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+                app:layout_constraintTop_toBottomOf="@+id/imageProfile"
                 app:startIconDrawable="@drawable/ic_baseline_person_24">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -171,17 +172,16 @@
 
             <Button
                 android:id="@+id/bt_Cancel_RegA"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/back"
                 android:drawableStart="@drawable/ic_backspace"
+                android:text="@string/back"
                 app:layout_constraintEnd_toStartOf="@+id/bt_Registrer_RegA"
                 app:layout_constraintHorizontal_bias="0.811"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/outlinedConfirmPassword"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/outlinedConfirmPassword" />
 
             <Button
                 android:id="@+id/bt_Registrer_RegA"
@@ -190,11 +190,62 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/register"
                 app:layout_constraintEnd_toEndOf="@+id/outlinedConfirmPassword"
-                app:layout_constraintTop_toBottomOf="@+id/outlinedConfirmPassword"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/outlinedConfirmPassword" />
+
+            <LinearLayout
+                android:id="@+id/imageProfile"
+                android:layout_width="0dp"
+                android:layout_height="118dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName">
+
+                <ImageView
+                    android:id="@+id/imageUser"
+                    android:layout_width="128dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_user" />
+
+                <Button
+                    android:id="@+id/bt_LoadImage"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="177dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/load_image"
+                    android:textColor="#DADADA"
+                    android:textSize="18sp" />
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/verificationAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar3"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

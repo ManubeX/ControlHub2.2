@@ -11,9 +11,9 @@ import proyecto.dam.controlhub.model.data.UserData
 class LoginViewModel : ViewModel() {
 
     private val buttonLogin = MutableLiveData<Boolean>()
-     val loginButtonPress : LiveData<Boolean> get() = buttonLogin
+    val loginButtonPress: LiveData<Boolean> get() = buttonLogin
 
-    val userError : LiveData<Boolean> get() = buttonLogin
+    val userError: LiveData<Boolean> get() = buttonLogin
 
     fun loginButtonPress() {
         buttonLogin.postValue(true)
@@ -22,17 +22,17 @@ class LoginViewModel : ViewModel() {
 
 
     private val companyData = MutableLiveData<CompanyData>()
-    val getCompanyData : LiveData<CompanyData> get()= companyData
+    val getCompanyData: LiveData<CompanyData> get() = companyData
 
-    fun loadCompanyData(data : CompanyData){
+    fun loadCompanyData(data: CompanyData) {
         companyData.postValue(data)
 
     }
 
     private val userData = MutableLiveData<UserData>()
-    val getUserData : LiveData<UserData> get()= userData
+    val getUserData: LiveData<UserData> get() = userData
 
-    fun loadUserData(data : UserData){
+    fun loadUserData(data: UserData) {
         userData.postValue(data)
 
     }

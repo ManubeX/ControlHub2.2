@@ -1,30 +1,29 @@
 package proyecto.dam.controlhub.ui.login
 
+import android.app.Activity.RESULT_OK
 import android.app.AlertDialog
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 import proyecto.dam.controlhub.R
-import proyecto.dam.controlhub.application.App.Companion.auth
 import proyecto.dam.controlhub.databinding.FragmentRegisterLoginAdminBinding
 import proyecto.dam.controlhub.model.data.UserData
-import proyecto.dam.controlhub.model.provider.RegisterFirebase
 
 
 class RegisterAdminLoginFragment : Fragment() {
 
     private var _binding: FragmentRegisterLoginAdminBinding? = null
     private val binding get() = _binding!!
-
     private val viewModel : LoginViewModel by activityViewModels()
+    private var uriImage = ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,6 +44,10 @@ class RegisterAdminLoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.btLoadImage.setOnClickListener {
+            loadImage()
+        }
+
 
         binding.btRegistrerRegA.setOnClickListener {
             if(checkFieldFilling()){
@@ -60,7 +63,16 @@ class RegisterAdminLoginFragment : Fragment() {
         }
     }
 
+    private fun loadImage() {
+        val intent = Intent("android.intent.action.GET_CONTENT")
+        intent.type = "image/*"
+        startActivityForResult(intent, 2)
+    }
+
     private fun checkFieldFilling() : Boolean {
+
+        binding.verificationAdmin.visibility = View.VISIBLE
+
         val registerCorrect: MutableList<Boolean> = mutableListOf()
         if (binding.outlinedName.editText?.text.toString().isNotEmpty()) {
             registerCorrect.add(0, true)
@@ -122,6 +134,9 @@ class RegisterAdminLoginFragment : Fragment() {
             binding.outlinedConfirmPassword.error = null
         }
 
+
+        binding.verificationAdmin.visibility = View.GONE
+
         for (check in registerCorrect){
             if(!check){
                 return false
@@ -148,10 +163,23 @@ class RegisterAdminLoginFragment : Fragment() {
             binding.outlinedEmail.editText?.text.toString(),
             binding.outlinedPassword.editText?.text.toString())
         user.job = "Admin"
+        user.imageUrl = uriImage
 
         return user
 
+    }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(resultCode == RESULT_OK){
+            if(requestCode == 2){
+                if (data != null) {
+                    binding.imageUser.setImageURI(data.data)
+                    var uri = data.data
+                    uriImage = uri.toString()
+                }
+            }
+        }
     }
     
 

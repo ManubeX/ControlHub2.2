@@ -39,4 +39,9 @@
         android:name="proyecto.dam.controlhub.ui.settings.SettingsFragment"
         android:label="@string/settings_nav_menu"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/nav_product"
+        android:name="proyecto.dam.controlhub.ui.product.ProductFragment"
+        android:label="@string/products"
+        tools:layout="@layout/fragment_product" />
 </navigation>

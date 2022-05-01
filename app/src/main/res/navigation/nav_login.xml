@@ -30,4 +30,9 @@
         android:name="proyecto.dam.controlhub.ui.login.RegistrationProcess"
         android:label="fragment_registration_process"
         tools:layout="@layout/fragment_registration_process" />
+    <fragment
+        android:id="@+id/regCompProcessFragment"
+        android:name="proyecto.dam.controlhub.ui.login.RegCompProcessFragment"
+        android:label="fragment_reg_comp_process"
+        tools:layout="@layout/fragment_reg_comp_process" />
 </navigation>
