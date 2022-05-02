@@ -46,14 +46,14 @@ class LoginHomeFragment : Fragment() {
             if (checkLogin()) {
                 binding.loadLayout.visibility = View.VISIBLE
                 auth.signInWithEmailAndPassword(
-                    binding.eTEmail.editText?.text.toString(),
-                    binding.eTPassword.editText?.text.toString()
+                    binding.eTEmail.editText?.text.toString().trim(),
+                    binding.eTPassword.editText?.text.toString().trim()
                 ).addOnCompleteListener {
                     if (it.isSuccessful) {
                         if (binding.cBRememberMe.isChecked) {
                             App.prefs.saveEmail(
-                                binding.eTEmail.editText?.text.toString(),
-                                binding.eTPassword.editText?.text.toString()
+                                binding.eTEmail.editText?.text.toString().trim(),
+                                binding.eTPassword.editText?.text.toString().trim()
                             )
                         }
                         reg.getInitUser(auth.currentUser?.uid.toString())
@@ -71,8 +71,8 @@ class LoginHomeFragment : Fragment() {
             }
 
             Log.i(
-                binding.eTEmail.editText?.text.toString(),
-                binding.eTPassword.editText?.text.toString()
+                binding.eTEmail.editText?.text.toString().trim(),
+                binding.eTPassword.editText?.text.toString().trim()
             )
         }
 

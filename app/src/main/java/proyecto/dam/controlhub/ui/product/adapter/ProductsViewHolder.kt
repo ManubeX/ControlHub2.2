@@ -12,12 +12,13 @@ class ProductsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val nameProduct = itemView.findViewById<TextView>(R.id.tv_product_name)
     private val familyProduct = itemView.findViewById<TextView>(R.id.tv_productFamily)
     private val priceProduct = itemView.findViewById<TextView>(R.id.tv_product_price)
-
+    private val formatProduct = itemView.findViewById<TextView>(R.id.tV_Format)
     fun render(product: ProductData) {
-        val priceText = product.price.toString() + "€"
+
         nameProduct.text = product.name
         familyProduct.text = product.family
-        priceProduct.text = priceText
+        priceProduct.text = product.price.toString()
+        formatProduct.text = product.format
     }
 
     fun getName(): TextView? {
@@ -30,6 +31,10 @@ class ProductsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     fun getPrice(): TextView? {
         return priceProduct
+    }
+
+    fun getFormat(): TextView? {
+        return formatProduct
     }
 
 }

@@ -80,6 +80,13 @@
     <string name="product_price">Price</string>
     <string name="product_add">Add product</string>
     <string name="delete_product">Delete product</string>
-    <string name="product_empty">empty product data</string>
+    <string name="product_empty">Empty product data</string>
+    <string name="product_exist">Product already exists</string>
+    <string name="edit_product">Edit</string>
+    
+    <string-array name="format">
+        <item>€/Kg</item>
+        <item>€/Unit</item>
+    </string-array>
 
 </resources>

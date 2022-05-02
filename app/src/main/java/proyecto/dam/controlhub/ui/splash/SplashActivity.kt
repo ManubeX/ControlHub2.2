@@ -6,10 +6,12 @@ import android.os.Bundle
 import proyecto.dam.controlhub.MainActivity
 import proyecto.dam.controlhub.application.App
 import proyecto.dam.controlhub.application.App.Companion.prefs
+import proyecto.dam.controlhub.model.provider.RegisterFirebase
 
 import proyecto.dam.controlhub.ui.login.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
+    private val reg = RegisterFirebase()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -18,6 +20,7 @@ class SplashActivity : AppCompatActivity() {
             App.auth.signInWithEmailAndPassword(
                 prefs.getEmail(),
                 prefs.getPassword()).addOnCompleteListener {
+                reg.getInitUser(App.auth.currentUser?.uid.toString())
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
             }

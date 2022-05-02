@@ -53,18 +53,37 @@ class RegisterFirebase() {
 
     fun setProduct(product: ProductData, company: String) {
 
-        db.collection(COLLECTION_APP).document(company).collection("Products")
-            .document(product.name).set(product)
+        db.collection(COLLECTION_APP)
+            .document(company)
+            .collection("Products")
+            .document(product.name.replace("/","_" )).set(product)
+            .addOnSuccessListener {
+            }.addOnFailureListener { e ->
+                Log.v("BBDD", "Error", e)
+            }
 
     }
 
     fun deleteProduct(product: ProductData, company: String) {
         db.collection(COLLECTION_APP).document(company).collection("Products")
-            .document(product.name).delete()
+            .document(product.name.replace("/","_" )).delete()
+    }
+
+    fun updateProduct(oldProduct: ProductData, newProduct: ProductData, company: String) {
+        db.collection(COLLECTION_APP).document(company).collection("Products")
+            .document(oldProduct.name.replace("/", "_")).delete()
+        db.collection(COLLECTION_APP)
+            .document(company)
+            .collection("Products")
+            .document(newProduct.name.replace("/", "_")).set(newProduct)
+            .addOnSuccessListener {
+            }.addOnFailureListener { e ->
+                Log.v("BBDD", "Error", e)
+            }
     }
 
     fun getProductList(company: String){
-        db.collection(COLLECTION_APP).document(company).collection("Products").get()
+        db.collection(COLLECTION_APP).document(company).collection("Products").orderBy("family").get()
             .addOnSuccessListener { document ->
                if(document != null){
                    for(product in document){
@@ -92,6 +111,8 @@ class RegisterFirebase() {
                     .document(idUser).get().addOnSuccessListener {
                         val userRec = it.toObject<UserData>()!!
                         App.userAPP = userRec
+                        getProductList(userRec.company)
+
                         Log.v("User Rec", userRec.name)
                         Log.v("User Rec", userReturn.name ?: "no")
                     }

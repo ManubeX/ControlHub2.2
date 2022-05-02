@@ -12,7 +12,9 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp">
+        android:layout_marginBottom="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp">
 
         <Button
             android:id="@+id/bt_Remove"
@@ -20,17 +22,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/delete_product"
-            app:layout_constraintEnd_toEndOf="@+id/et_productFamily"
-            app:layout_constraintStart_toStartOf="@+id/et_productFamily"
-            app:layout_constraintTop_toBottomOf="@+id/et_productFamily" />
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/bt_add"
+            app:layout_constraintStart_toStartOf="@+id/et_productPrice"
+            app:layout_constraintTop_toTopOf="@+id/bt_add" />
 
         <Button
             android:id="@+id/bt_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/product_add"
-            app:layout_constraintEnd_toEndOf="@+id/et_productPrice"
-            app:layout_constraintStart_toStartOf="@+id/et_productPrice"
+            app:layout_constraintEnd_toEndOf="@+id/et_productFamily"
+            app:layout_constraintStart_toEndOf="@+id/et_productPrice"
             app:layout_constraintTop_toBottomOf="@+id/et_productPrice" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -38,9 +41,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="32dp"
             android:hint="@string/product_name"
             app:endIconMode="clear_text"
             app:errorEnabled="true"
@@ -63,11 +64,10 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:hint="@string/product_family"
             app:endIconMode="clear_text"
             app:errorEnabled="true"
-            app:layout_constraintEnd_toStartOf="@+id/et_productPrice"
+            app:layout_constraintEnd_toEndOf="@+id/et_productName"
             app:layout_constraintStart_toStartOf="@+id/et_productName"
             app:layout_constraintTop_toBottomOf="@+id/et_productName"
             app:startIconDrawable="@drawable/ic_business">
@@ -83,13 +83,13 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/et_productPrice"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="139dp"
-            android:layout_height="80dp"
+            android:layout_width="197dp"
+            android:layout_height="79dp"
             android:hint="@string/product_price"
             app:endIconMode="clear_text"
             app:errorEnabled="true"
-            app:layout_constraintEnd_toEndOf="@+id/et_productName"
-            app:layout_constraintTop_toBottomOf="@+id/et_productName"
+            app:layout_constraintStart_toStartOf="@+id/et_productFamily"
+            app:layout_constraintTop_toBottomOf="@+id/et_productFamily"
             app:startIconDrawable="@drawable/ic_business">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -100,6 +100,17 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            app:layout_constraintBottom_toTopOf="@+id/bt_add"
+            app:layout_constraintEnd_toEndOf="@+id/et_productFamily"
+            app:layout_constraintStart_toEndOf="@+id/et_productPrice"
+            app:layout_constraintTop_toTopOf="@+id/et_productPrice"
+            app:layout_constraintVertical_bias="0.347"
+            tools:listitem="@layout/support_simple_spinner_dropdown_item"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -108,6 +119,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:textAlignment="textStart" />
 
 </LinearLayout>

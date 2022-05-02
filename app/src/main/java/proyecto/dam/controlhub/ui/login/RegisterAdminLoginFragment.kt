@@ -157,11 +157,11 @@ class RegisterAdminLoginFragment : Fragment() {
     }
 
     private fun createUserAdmin(): UserData {
-        val user = UserData(binding.outlinedName.editText?.text.toString(),
-            binding.outlinedFirstLastName.editText?.text.toString(),
-            binding.outlinedSecondLastName.editText?.text.toString(),
-            binding.outlinedEmail.editText?.text.toString(),
-            binding.outlinedPassword.editText?.text.toString())
+        val user = UserData(binding.outlinedName.editText?.text.toString().trim(),
+            binding.outlinedFirstLastName.editText?.text.toString().trim(),
+            binding.outlinedSecondLastName.editText?.text.toString().trim(),
+            binding.outlinedEmail.editText?.text.toString().trim(),
+            binding.outlinedPassword.editText?.text.toString().trim())
         user.job = "Admin"
         user.imageUrl = uriImage
 
