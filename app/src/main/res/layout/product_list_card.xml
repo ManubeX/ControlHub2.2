@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/card_layout"
+    android:id="@+id/prodruct_list_card_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?android:attr/selectableItemBackground"
@@ -15,7 +15,7 @@
         android:layout_width="40dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        app:srcCompat="@drawable/ic_cr" />
+        app:srcCompat="@drawable/ic_add_box" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
         android:layout_weight="2">
 
         <TextView
-            android:id="@+id/tv_product_name"
+            android:id="@+id/tv_productList_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -35,38 +35,47 @@
             tools:text="Producto" />
 
         <TextView
-            android:id="@+id/tv_productFamily"
+            android:id="@+id/tv_productFamilyList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/tv_product_name"
-            app:layout_constraintTop_toBottomOf="@+id/tv_product_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_productList_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_productList_name"
             tools:text="Family: Pan" />
 
         <TextView
-            android:id="@+id/tv_product_price"
+            android:id="@+id/tv_product_priceList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tv_productFamily"
-            app:layout_constraintTop_toBottomOf="@+id/tv_product_name"
+            app:layout_constraintStart_toEndOf="@+id/tv_productFamilyList"
+            app:layout_constraintTop_toBottomOf="@+id/tv_productList_name"
             tools:text="Prize: 10,00" />
 
         <TextView
-            android:id="@+id/tV_Format"
+            android:id="@+id/tV_FormatList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_product_price"
-            app:layout_constraintStart_toEndOf="@+id/tv_product_price"
-            app:layout_constraintTop_toTopOf="@+id/tv_product_price"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_product_priceList"
+            app:layout_constraintStart_toEndOf="@+id/tv_product_priceList"
+            app:layout_constraintTop_toTopOf="@+id/tv_product_priceList"
             tools:text="€/kg" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <ImageView
+        android:id="@+id/checkItem"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/ic_check_circle"
+        android:visibility="invisible"
+/>
 
 
 </LinearLayout>

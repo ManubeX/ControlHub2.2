@@ -3,23 +3,29 @@ package proyecto.dam.controlhub.core
 import java.util.*
 import java.util.Calendar.*
 
-class DataUtil {
+object DataUtil {
 
-        private var rightNow: Calendar? = Calendar.getInstance()
-        private var month = rightNow?.get(MONTH)
-        private var day = rightNow?.get(DAY_OF_MONTH)
-        private var year = rightNow?.get(YEAR)
+    private var rightNow: Calendar? = Calendar.getInstance()
+    private var month = rightNow?.get(MONTH)
+    private var day = rightNow?.get(DAY_OF_MONTH)
+    private var year = rightNow?.get(YEAR)
 
-        public fun getMoth() : Int? {
-            return (month?.plus(1))
-        }
-        public fun getYear() : Int? {
-            return year
-        }
-        public fun getDay() : Int? {
-            return day
-        }
-
-
+    fun getMoth(): Int? {
+        return (month?.plus(1))
     }
+
+    fun getYear(): Int? {
+        return year
+    }
+
+    fun getDay(): Int? {
+        return day
+    }
+
+    fun getData(): String {
+        return "$day/$month/$year"
+    }
+
+
+}
 

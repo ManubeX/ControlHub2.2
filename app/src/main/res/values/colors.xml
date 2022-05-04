@@ -14,5 +14,6 @@
     <color name="background_logo">#ce2410</color>
 
     <color name="clock">#BF0D47A1</color>
+    <color name="select">#C1008080</color>
 
 </resources>

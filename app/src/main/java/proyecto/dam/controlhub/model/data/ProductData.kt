@@ -9,6 +9,7 @@ data class ProductData(
     constructor() : this("","",0.0,"")
     val produced = 0.0
     val sold = 0.0
+    var check = false
 
 
 }

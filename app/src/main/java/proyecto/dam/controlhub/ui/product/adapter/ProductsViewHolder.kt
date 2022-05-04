@@ -1,7 +1,10 @@
 package proyecto.dam.controlhub.ui.product.adapter
 
 
+import android.text.Layout
 import android.view.View
+import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import proyecto.dam.controlhub.R
@@ -19,6 +22,7 @@ class ProductsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         familyProduct.text = product.family
         priceProduct.text = product.price.toString()
         formatProduct.text = product.format
+
     }
 
     fun getName(): TextView? {
@@ -36,5 +40,7 @@ class ProductsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun getFormat(): TextView? {
         return formatProduct
     }
+
+
 
 }

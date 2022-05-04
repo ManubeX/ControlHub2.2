@@ -3,6 +3,7 @@ package proyecto.dam.controlhub.ui.product.adapter
 
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import proyecto.dam.controlhub.R
@@ -34,7 +35,6 @@ class ProductsAdapter() :
     }
 
 
-
     fun setProducts(products: MutableList<ProductData>) {
         productList = products
         notifyDataSetChanged()
@@ -60,6 +60,7 @@ class ProductsAdapter() :
         rf.updateProduct(oldProduct,product,App.userAPP.company)
         notifyItemChanged(index)
     }
+
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductsViewHolder {

@@ -28,7 +28,7 @@
         <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/content_main.xml" value="0.17426545086119555" />
         <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_forgot_password_login.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_home.xml" value="0.33" />
-        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_listas.xml" value="0.19880290722530997" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_listas.xml" value="0.22" />
         <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_login.xml" value="0.33" />
         <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_login_home.xml" value="0.18" />
         <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_messages.xml" value="0.3625" />
@@ -41,10 +41,13 @@
         <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_register_login_admin.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_register_qr_login.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_registration_process.xml" value="0.22359982898674646" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_select_product_list.xml" value="0.28921124206708976" />
         <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_settings.xml" value="0.3484375" />
         <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/fragment_slideshow.xml" value="0.1" />
         <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/nav_header_main.xml" value="0.2921195652173913" />
-        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/product_card.xml" value="0.6857798165137615" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/poduct_list_card.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/product_card.xml" value="0.4385432473444613" />
+        <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/layout/product_list_card.xml" value="0.28921124206708976" />
         <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/menu/activity_main_drawer.xml" value="0.3625" />
         <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/menu/main.xml" value="0.3625" />
         <entry key="..\:/Users/manu_/AndroidStudioProjects/ControlHub2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1225" />

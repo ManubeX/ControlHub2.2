@@ -44,4 +44,9 @@
         android:name="proyecto.dam.controlhub.ui.product.ProductFragment"
         android:label="@string/products"
         tools:layout="@layout/fragment_product" />
+    <fragment
+        android:id="@+id/selectProductListFragment"
+        android:name="proyecto.dam.controlhub.ui.lists.SelectProductListFragment"
+        android:label="fragment_select_product_list"
+        tools:layout="@layout/fragment_select_product_list" />
 </navigation>
